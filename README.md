@@ -4,11 +4,12 @@ Welcome to the repository for homework solutions for the [CIS 194: Introduction 
 
 ## Repository Structure
 
-The repository is organized by homework assignments. Assignments are organized according to the week it was assigned (e.g., `hw01`, `hw02`, etc.). Within each directory, you will find the following files:
+The repository is organized by homework assignments.
 
-- `README.md` - A brief description of the homework assignment.
 - `src/` - The source code for the solutions.
 - `test/` - Test cases and scripts to verify the solutions.
+
+In both directories `src/` and `test/`, assignments are organized according to the week it was assigned (e.g., `hw01`, `hw02`, etc.).
 
 ## How to Use
 
