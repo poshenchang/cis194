@@ -38,7 +38,7 @@ To compile and run the Haskell code, follow these steps:
 
 3. Compile and run the solution:
     ```sh
-    ghc -o solution src/Main.hs
+    ghc -o solution src/ex01.hs
     ./solution
     ```
 
