@@ -38,7 +38,7 @@ sumDigits []       = 0
 -- sumDigits = foldr ((+) . sum . toDigits) 0
 --   foldr :: (a -> b -> b) -> b -> [a] -> b
 --   takes b and last item of [a] and applies the function, 
---   then takes second-to-last item of [a] and the result
+--   then takes the result and the second-to-last item of [a]
 --   and applies the function, and so on.
 
 -- Exercise 4
