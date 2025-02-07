@@ -65,12 +65,15 @@ inOrder (Node left msg right) = inOrder left ++ (msg : inOrder right)
 
 -- Exercise 5
 
--- Extract relevant LogMessages (error messages with severity >= 50).
+-- Determines whether a LogMessage is relevant.
+-- A LogMessage is relevant if error messages with severity >= 50.
+isRelevant :: LogMessage -> Bool
+isRelevant (LogMessage (Error err) _ _) = err >= 50
+isRelevant _ = False
+
+-- Extract relevant LogMessages.
 relevantLogs :: [LogMessage] -> [LogMessage]
-relevantLogs [] = []
-relevantLogs (msg@(LogMessage (Error err) _ _) : xs)
-    | err >= 50 = msg : relevantLogs xs
-relevantLogs (_ : xs) = relevantLogs xs
+relevantLogs = filter isRelevant
 
 -- Extract the message String from LogMessage.
 extractMsg :: LogMessage -> String
