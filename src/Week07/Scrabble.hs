@@ -16,19 +16,19 @@ instance Monoid Score where
     mappend = (<>)
 
 score :: Char -> Score
-score c | l `elem` ['a', 'e', 'i', 'l', 'o', 'r', 's', 't', 'u']
+score c | l `elem` "aeilorstu"
           = Score 1
-        | l == 'd' || l == 'g'
+        | l `elem` "dg"
           = Score 2
-        | l `elem` ['b', 'c', 'm', 'p']
+        | l `elem` "bcmp"
           = Score 3
-        | l `elem` ['f', 'h', 'v', 'w', 'y']
+        | l `elem` "fhvwy"
           = Score 4
-        | l == 'k'
+        | l `elem` "k"
           = Score 5
-        | l == 'j' || l == 'x'
+        | l `elem` "jx"
           = Score 8
-        | l == 'q' || l == 'z'
+        | l `elem` "qz"
           = Score 10
         | otherwise = Score 0
         where l = toLower c
