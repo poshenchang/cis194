@@ -57,7 +57,8 @@ library
     hs-source-dirs:   src
     exposed-modules:  Week01.CreditCard,
                       Week01.Hanoi
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1,
+                      MonadRandom
 
 test-suite cis194-hw-solutions-test
     -- Import common warning flags.
